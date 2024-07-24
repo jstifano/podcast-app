@@ -1,12 +1,12 @@
 # Podcast App
 
-Prueba técnica de Capitole Consulting para el client Inditex
+Prueba técnica de Capitole Consulting para el cliente Inditex.
 
 ## Requisitos
 
 Asegúrate de tener instalados los siguientes requisitos antes de ejecutar la aplicación:
 
-- Node.js (v20.12.2 o superior)
+- Node.js (v20.12.2 o superior).
 
 ## Configuración del Proyecto
 
@@ -15,11 +15,11 @@ Asegúrate de tener instalados los siguientes requisitos antes de ejecutar la ap
   git clone https://github.com/jstifano/podcast-app.git
   cd podcast-app
   ```
-- Ejecutar `npm install` para instalar las dependencias del proyecto
+- Ejecutar `npm install` para instalar las dependencias del proyecto.
 
-Configuración de App en Modo Development
+## Configuración de App en Modo Development
 
-- Estar dentro de la carpeta de podcast-app
+- Estar dentro de la carpeta de podcast-app.
 
 - Ejecutar el script para generar el build en modo desarrollo con el comando `npm run build-dev`
 
@@ -27,7 +27,7 @@ Configuración de App en Modo Development
 
 - Se abrirá una pestaña del navegador con la página en http://localhost:8080
 
-Configuración de App en Modo Producción
+## Configuración de App en Modo Producción
 
 - Estar dentro de la carpeta de podcast-app
 
@@ -37,7 +37,7 @@ Configuración de App en Modo Producción
 
 - Se abrirá una pestaña del navegador con la página en http://localhost:8080
 
-NOTAS IMPORTANTES:
+## NOTAS IMPORTANTES:
 
 - He generado solamente un tag para mostrar que se como realizarlo y como hacer seguimiento al proyecto a través de ellos
 

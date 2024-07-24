@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC, useState } from 'react';
+import AppRoutes from './routes/index'
+import Header from './components/Header'
+import LoadingHandler from './components/LoadingHandler';
 
-function App() {
+const App: FC = () => {
+  const [loading, setLoading] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header loading={loading} />
+      <LoadingHandler setLoading={setLoading} />
+      <div className="pt-1">
+        <AppRoutes />
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App

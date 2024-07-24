@@ -15,9 +15,9 @@ Asegúrate de tener instalados los siguientes requisitos antes de ejecutar la ap
   git clone https://github.com/jstifano/podcast-app.git
   cd podcast-app
   ```
-- Ejecutar `npm install` para instalar las dependencias del proyecto.
+- Ejecutar `npm install` para instalar las dependencias del proyecto
 
-## Configuración de App en Modo Development
+Configuración de App en Modo Development
 
 - Estar dentro de la carpeta de podcast-app
 
@@ -27,7 +27,7 @@ Asegúrate de tener instalados los siguientes requisitos antes de ejecutar la ap
 
 - Se abrirá una pestaña del navegador con la página en http://localhost:8080
 
-## Configuración de App en Modo Producción
+Configuración de App en Modo Producción
 
 - Estar dentro de la carpeta de podcast-app
 
@@ -37,8 +37,8 @@ Asegúrate de tener instalados los siguientes requisitos antes de ejecutar la ap
 
 - Se abrirá una pestaña del navegador con la página en http://localhost:8080
 
-### NOTAS IMPORTANTES:
+NOTAS IMPORTANTES:
 
-- He generado solamente un tag para mostrar que se como realizarlo y como hacer seguimiento al proyecto a través de ellos.
+- He generado solamente un tag para mostrar que se como realizarlo y como hacer seguimiento al proyecto a través de ellos
 
-- Lo mismo con los commits, hice unos cuantos describiendo algunos componentes y luego realice `git add .` para subir todos los restantes ya que los tenía en local.
+- Lo mismo con los commits, hice unos cuantos describiendo algunos componentes y luego realice `git add .` para subir todos los restantes ya que los tenía en local

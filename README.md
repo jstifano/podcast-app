@@ -11,10 +11,10 @@ Asegúrate de tener instalados los siguientes requisitos antes de ejecutar la ap
 ## Configuración del Proyecto
 
 1. Clona el repositorio a tu máquina local:
-  ```bash
+  ```
   git clone https://github.com/jstifano/podcast-app.git
   cd podcast-app
-
+  ```
 2. Ejecutar `npm install` para instalar las dependencias del proyecto.
 
 ## Configuración de App en Modo Development

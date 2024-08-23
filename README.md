@@ -42,3 +42,7 @@ NOTAS IMPORTANTES:
 - He generado solamente un tag para mostrar que se como realizarlo y como hacer seguimiento al proyecto a través de ellos
 
 - Lo mismo con los commits, hice unos cuantos describiendo algunos componentes y luego realice `git add .` para subir todos los restantes ya que los tenía en local
+
+## Pruebas Unitarias (Unit Testing)
+
+- Ejecutar `npm test` para correr las pruebas unitarias realizadas a los servicios de Podcast y a las funciones de utilidad que se manipulan dentro del proyecto.

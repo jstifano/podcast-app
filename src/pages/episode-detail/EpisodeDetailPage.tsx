@@ -5,9 +5,9 @@ import { formatTextToHtml } from '@utils/helpers'
 
 const EpisodeDetailPage: FC = () => {
   
-  const { episodeId } = useParams<{ episodeId: string }>()
-  const data = usePodcast()
-  const episode = data.podcast.episodes.find(ep => ep.trackId.toString() === episodeId)
+  const { episodeId } = useParams<{ episodeId: string }>();
+  const data = usePodcast();
+  const episode = data.podcast.episodes.find(ep => ep.trackId.toString() === episodeId);
 
   return (
     episode ? 

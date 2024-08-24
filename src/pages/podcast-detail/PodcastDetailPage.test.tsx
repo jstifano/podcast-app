@@ -53,7 +53,7 @@ describe('PodcastDetailPage', () => {
     );
 
     // Assert
-    await waitFor(() => expect(screen.getByText(new RegExp(`Mocked PodcastDescriptionCard`, 'i'))));
+    await waitFor(() => expect(screen.getByText(/Mocked PodcastDescriptionCard/i)));
   })
 
   it('should fetch and display podcast data when it is not present initially', async () => {

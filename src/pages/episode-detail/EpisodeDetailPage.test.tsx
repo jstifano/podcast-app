@@ -5,10 +5,10 @@ import EpisodeDetailPage from './EpisodeDetailPage';
 import * as helpers from '@utils/helpers';
 import { usePodcast } from '@contexts/PodcastContext'; 
 
-// Mock del contexto usePodcast
+// Context mock for usePodcast
 jest.mock('@contexts/PodcastContext');
 
-// Mock del helper formatTextToHtml
+// Helper mock for formatTextToHtml
 jest.mock('@utils/helpers', () => ({
   ...jest.requireActual('@utils/helpers'),
   formatTextToHtml: jest.fn((text) => text),

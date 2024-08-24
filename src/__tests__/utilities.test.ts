@@ -100,15 +100,15 @@ describe('Helpers', () => {
   });
   
   describe("formatTextToHtml", () => {
-    it('Reemplaza las URLs por enlaces HTML', () => {
-      const text = 'Visita https://example.com para más información';
-      const expectedOutput = 'Visita <a href="https://example.com" target="_blank" rel="noopener noreferrer">https://example.com</a> para más información';
+    it('Replace the URLs by HTML links', () => {
+      const text = 'Visit https://example.com for more information';
+      const expectedOutput = 'Visit <a href="https://example.com" target="_blank" rel="noopener noreferrer">https://example.com</a> for more information';
   
       expect(formatTextToHtml(text)).toBe(expectedOutput);
     });
   
-    it('Retorna el texto sin cambios si no hay URLs', () => {
-      const text = 'No hay enlaces en este texto';
+    it('Return the text without changes if there are no URLs', () => {
+      const text = 'There are no link in this text';
       expect(formatTextToHtml(text)).toBe(text);
     });
   });

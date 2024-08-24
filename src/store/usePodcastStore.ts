@@ -22,7 +22,7 @@ const usePodcastStore = create<PodcastState>((set) => ({
       set({ loading: true })
       
       // Recover the podcast and date that we call last time to the API
-      let podcastsFromLocalStorage: FetchPodcast | null = retrieveDatafromLocalStorage('fetchPodcast')
+      let podcastsFromLocalStorage: FetchPodcast | null = retrieveDatafromLocalStorage('fetchPodcast');
       
       // If the info exists and has not elapsed more than 24 hours since the last time, we take that information from localStorage
       if (
@@ -34,11 +34,11 @@ const usePodcastStore = create<PodcastState>((set) => ({
           filteredPodcasts: podcastsFromLocalStorage.podcasts,
           loading: false,
           error: null,
-        })
+        });
       } else {
         // If something exists in localStorage about the podcast, we'll clean up
         if (podcastsFromLocalStorage) {
-          deleteFromStorage('fetchPodcast')
+          deleteFromStorage('fetchPodcast');
         }
 
         const podcasts = await getTopPodcasts();
@@ -46,7 +46,7 @@ const usePodcastStore = create<PodcastState>((set) => ({
         setDataToLocalStorage('fetchPodcast', {
           podcasts: podcasts,
           date: new Date().getTime()
-        })
+        });
 
         set({
           podcasts,
@@ -60,7 +60,7 @@ const usePodcastStore = create<PodcastState>((set) => ({
         loading: false,
         error: err.message,
         trace: err.stack
-      })
+      });
     }
   },
   getPodcastDetailById: async (id: string) => {
@@ -94,9 +94,9 @@ const usePodcastStore = create<PodcastState>((set) => ({
           copyOfLocalStorage[id] = {
             detail: detailFromApi,
             date: new Date().getTime()
-          }
+          };
 
-          setDataToLocalStorage('podcastDetail', copyOfLocalStorage)
+          setDataToLocalStorage('podcastDetail', copyOfLocalStorage);
   
           set({
             currentPodcast: detailFromApi,
@@ -104,7 +104,7 @@ const usePodcastStore = create<PodcastState>((set) => ({
             error: null,
           });
         } else {
-          throw new Error('An error has ocurred with Podcast Detail API')
+          throw new Error('An error has ocurred with Podcast Detail API');
         }
       }
     } catch (err: any) {
@@ -112,7 +112,7 @@ const usePodcastStore = create<PodcastState>((set) => ({
         loading: false,
         error: err.message,
         trace: err.stack
-      })
+      });
     }
   },
   setSearchTerm: (term: string) => {
@@ -125,7 +125,7 @@ const usePodcastStore = create<PodcastState>((set) => ({
       return {
         searchTerm: term,
         filteredPodcasts: filtered,
-      }
+      };
     })
   },
 }))

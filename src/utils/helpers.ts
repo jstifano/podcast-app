@@ -1,13 +1,13 @@
 export const isGreaterOrEqualThan24Hours = (date: number | null): Boolean => {
   if (date) {
-    const now = new Date().getTime()
-    const difference = now - date
-    const hoursDifference = difference / (1000 * 60 * 60)
+    const now = new Date().getTime();
+    const difference = now - date;
+    const hoursDifference = difference / (1000 * 60 * 60);
     
-    return Boolean(hoursDifference >= 24)
+    return Boolean(hoursDifference >= 24);
   }
-  return false
-}
+  return false;
+};
 
 export const setDataToLocalStorage = <T>(key: string, valor: T): void => {
   localStorage.setItem(key, JSON.stringify(valor))
@@ -19,12 +19,12 @@ export const retrieveDatafromLocalStorage = <T>(key: string): T | null => {
 }
 
 export const deleteFromStorage = (key: string): void => {
-  localStorage.removeItem(key)
+  localStorage.removeItem(key);
 }
 
 export const convertMillisecondsToDuration = (milliseconds: string) => {
   if(!milliseconds) {
-    return `00:00 (No duration in the API)`
+    return `00:00 (No duration in the API)`;
   } else {
      // Calculate hours, minutes, and seconds from the milliseconds
     const hours = Math.floor(+milliseconds / (1000 * 60 * 60));
@@ -51,7 +51,7 @@ export const formatTextToHtml = (text: string) => {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
 
   // Replace URLs with HTML links
-  const formattedText = text.replace(urlRegex, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
+  const formattedText = text.replace(urlRegex, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
 
-  return formattedText
+  return formattedText;
 }

@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Episode } from '../types/index'
-import { convertMillisecondsToDuration } from '../utils/utilities'
-import { usePodcast } from '../contexts/PodcastContext'
+import { convertMillisecondsToDuration } from '@utils/helpers'
+import { usePodcast } from '@contexts/PodcastContext'
 
 const EpisodeList: FC = () => {
   const { podcastId } = useParams<{ podcastId: string }>()

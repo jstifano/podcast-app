@@ -1,48 +1,44 @@
 # Podcast App
 
-Prueba técnica de Capitole Consulting para el cliente Inditex.
+Technical test - Capitole Consulting for Inditex client.
 
-## Requisitos
+## Requirements
 
-Asegúrate de tener instalados los siguientes requisitos antes de ejecutar la aplicación:
+Make sure that we have installed the following requirements before to run the application:
 
-- Node.js (v20.12.2 o superior).
+- Node.js (v20.12.2 or higher).
 
-## Configuración del Proyecto
+## Configuration
 
-- Clona el repositorio a tu máquina local:
+- Clone the project to your local machine:
   ```
   git clone https://github.com/jstifano/podcast-app.git
   cd podcast-app
   ```
-- Ejecutar `npm install` para instalar las dependencias del proyecto.
+- Execute `npm install` to install all the project dependencies.
 
-## Configuración de App en Modo Development
+## App configuration in Development Mode
 
-- Estar dentro de la carpeta de podcast-app.
+- Be inside podcast-app folder.
 
-- Ejecutar el script para generar el build en modo desarrollo con el comando `npm run build-dev`
+- Execute the script to generate the build in development mode with the command `npm run build:dev`
 
-- Ejecutar el script para levantar el server en modo desarrollo con el comando `npm run start-dev`
+- Execute the script to lift the server in development mode with the command `npm run start:dev`
 
-- Se abrirá una pestaña del navegador con la página en http://localhost:8080
+- It will open a new tab in the browser with the page in http://localhost:8080
 
-## Configuración de App en Modo Producción
+## App configuration in Production Mode
 
-- Estar dentro de la carpeta de podcast-app
+- Be inside podcast-app folder.
 
-- Ejecutar el script para generar el build en modo desarrollo con el comando `npm run build-prod`
+- Execute the script to generate the build in production mode with the command  `npm run build:prod`
 
-- Ejecutar el script para levantar el server en modo desarrollo con el comando `npm run start-prod`
+- Execute the script to generate the build in production mode with the command  `npm run start:prod`
 
-- Se abrirá una pestaña del navegador con la página en http://localhost:8080
+- It will open a browser tab within the browser with the page in http://localhost:8080
 
-## NOTAS IMPORTANTES:
+## Unit Testing
 
-- He generado solamente un tag para mostrar que se como realizarlo y como hacer seguimiento al proyecto a través de ellos
+- Execute `npm test` to run the unit tests made to the Podcast services, utility functions that are manipulated inside the project how as well some unit test with RTL and applying AAA architecture for the pages involved in the app.
 
-- Lo mismo con los commits, hice unos cuantos describiendo algunos componentes y luego realice `git add .` para subir todos los restantes ya que los tenía en local
-
-## Pruebas Unitarias (Unit Testing)
-
-- Ejecutar `npm test` para correr las pruebas unitarias realizadas a los servicios de Podcast y a las funciones de utilidad que se manipulan dentro del proyecto.
+Moreover, the tests will generate the testing coverage into the /coverage folder which can opened and verify the % that was covered, this can be found inside /coverage/lcov-report/index.html

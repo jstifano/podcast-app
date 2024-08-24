@@ -18,6 +18,17 @@ module.exports = (env, argv) => {
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
+      alias: {
+        '@components': path.resolve(__dirname, 'src/components/'),
+        '@contexts': path.resolve(__dirname, 'src/contexts/'),
+        '@hooks': path.resolve(__dirname, 'src/hooks/'),
+        '@pages': path.resolve(__dirname, 'src/pages/'),
+        '@routes': path.resolve(__dirname, 'src/routes/'),
+        '@services': path.resolve(__dirname, 'src/services/'),
+        '@store': path.resolve(__dirname, 'src/store/'),
+        '@types': path.resolve(__dirname, 'src/types/'),
+        '@utils': path.resolve(__dirname, 'src/utils/')
+      }
     },
     module: {
       rules: [
@@ -75,5 +86,9 @@ module.exports = (env, argv) => {
       hot: true,
       open: true,
     },
+    performance: {
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000
+    }
   };
 };

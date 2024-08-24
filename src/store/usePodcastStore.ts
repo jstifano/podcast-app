@@ -1,12 +1,12 @@
 import { create } from 'zustand'
 import { FetchPodcast, Podcast, PodcastDetailStorage, PodcastState } from '../types/index'
-import { getTopPodcasts, getPodcastDetail } from '../services/podcastService'
+import { getTopPodcasts, getPodcastDetail } from '@services/podcastService'
 import { 
   deleteFromStorage,
   setDataToLocalStorage, 
   isGreaterOrEqualThan24Hours, 
   retrieveDatafromLocalStorage 
-} from '../utils/utilities'
+} from '@utils/helpers'
 
 // Creación de la tienda de Zustand
 const usePodcastStore = create<PodcastState>((set) => ({
@@ -21,10 +21,10 @@ const usePodcastStore = create<PodcastState>((set) => ({
     try {
       set({ loading: true })
       
-      // Recuperamos los podcast y la fecha que llamamos la ultima vez al API
+      // Recover the podcast and date that we call last time to the API
       let podcastsFromLocalStorage: FetchPodcast | null = retrieveDatafromLocalStorage('fetchPodcast')
       
-      // Si existe la info y no han pasado mas de 24 horas desde la ultima vez, tomamos esa informacion del localStorage
+      // If the info exists and has not elapsed more than 24 hours since the last time, we take that information from localStorage
       if (
         podcastsFromLocalStorage && 
         !isGreaterOrEqualThan24Hours(podcastsFromLocalStorage ? podcastsFromLocalStorage.date : null)
@@ -36,7 +36,7 @@ const usePodcastStore = create<PodcastState>((set) => ({
           error: null,
         })
       } else {
-        // Si existe algo en localStorage de los podcasts, lo limpiamos
+        // If something exists in localStorage about the podcast, we'll clean up
         if (podcastsFromLocalStorage) {
           deleteFromStorage('fetchPodcast')
         }
@@ -83,7 +83,7 @@ const usePodcastStore = create<PodcastState>((set) => ({
         let copyOfLocalStorage = { ...podcastDetailFromStorage }
         delete copyOfLocalStorage[id]
 
-        // Si existe algo en localStorage de los podcasts, lo limpiamos
+        // If something exists in localStorage about the podcast, we'll clean up
         if (podcastDetailFromStorage) {
           deleteFromStorage('podcastDetail')
         }
@@ -104,7 +104,7 @@ const usePodcastStore = create<PodcastState>((set) => ({
             error: null,
           });
         } else {
-          console.error('Get Podcast Detail API threw an error')
+          throw new Error('An error has ocurred with Podcast Detail API')
         }
       }
     } catch (err: any) {

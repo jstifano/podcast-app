@@ -22,7 +22,7 @@ export const getPodcastDetail = async (podcastId: string): Promise<Podcast | nul
     `${API_ALL_ORIGINS}/get?url=${encodeURIComponent(`${BASE_URL}/lookup?id=${podcastId}&media=podcast&entity=podcastEpisode&limit=2`)}`
   )
 
-  if (response.data && JSON.parse(response.data.status.http_code) === 200 && response.statusText === 'OK') {
+  if (response.data && response.data.status.http_code === 200 && response.statusText === 'OK') {
     const parsedResponse = JSON.parse(response.data.contents)
     let podcast = parsedResponse.results[0]
     
@@ -34,6 +34,7 @@ export const getPodcastDetail = async (podcastId: string): Promise<Podcast | nul
       trackTimeMillis: episode.trackTimeMillis,
       episodeUrl: episode.episodeUrl
     }))
+
     return {
       id: podcast.collectionId,
       title: podcast.collectionName,

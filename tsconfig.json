@@ -23,9 +23,11 @@
       "@routes/*": ["routes/*"],
       "@types/*": ["types/*"],
       "@utils/*": ["utils/*"],
-      "@store/*": ["store/*"]
+      "@store/*": ["store/*"],
+      "@contexts/*": ["contexts/*"]
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "build"],
+  "types": ["jest", "@testing-library/jest-dom"]
 }

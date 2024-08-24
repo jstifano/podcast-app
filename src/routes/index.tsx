@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import HomePage from '../pages/HomePage'
-import PodcastDetailPage from '../pages/PodcastDetailPage'
-import EpisodeList from '../components/EpisodeList'
-import EpisodeDetailPage from '../pages/EpisodeDetailPage'
+import HomePage from '@pages/home/HomePage'
+import PodcastDetailPage from '@pages/podcast-detail/PodcastDetailPage'
+import EpisodeList from '@components/EpisodeList'
+import EpisodeDetailPage from '@pages/episode-detail/EpisodeDetailPage'
 
 const AppRoutes: FC = () => {
   return (

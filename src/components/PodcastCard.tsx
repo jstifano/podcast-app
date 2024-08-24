@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import { Podcast } from '../types/index'
 import { useNavigate } from 'react-router-dom'
-import usePodcastStore from '../store/usePodcastStore'
+import usePodcastStore from '@store/usePodcastStore'
+import { Podcast } from '../types/index'
 
 interface PodcastCardProps {
   podcast: Podcast
